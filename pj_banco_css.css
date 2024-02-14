@@ -1,0 +1,16 @@
+h1 {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: pink;
+    border-radius: 1px;
+    border-style: ridge;
+}
+
+#div_sup {
+    background-color: aqua;
+    padding-left: 15%;
+}
+
+#div_inf {
+    background-color: red;
+}
