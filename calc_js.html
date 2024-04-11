@@ -2,21 +2,36 @@
 <html lang="pt-br">
     <head>
         <title> aulas</title>
-        <link rel="stylesheet" type="text/css" href="calc_js.css"/>
+        <link rel="stylesheet" type="text/css" href="calc_css.css"/>
         <meta charset="UTF-8">
+        
         <script>
             
+            function insertButton(btn) {
+                var old = document.getElementById('visor').value;
+                document.getElementById('visor').value = old + btn;
+            }
+
+            function clearText(){
+                document.getElementById('visor').value = "";
+            }
+
+            function soma() {
+                document.getElementById('teste').innerHTML = "12345"[0];
+            }
+
         </script>
 
     </head>  
     <body>
         <div class="main">
             <div class="calc">
+                <h1 id="teste"></h1>
                 <table>
                     <tr>
                         <td>
                             <div class="div_vision">
-                                <input type="text" id="visor">
+                                <input type="text" id="visor" readonly="readonly">
                             </div>
                         </td>
                     </tr>
@@ -26,30 +41,36 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <button>7</button>
-                                            <button>8</button>
-                                            <button>9</button>
+                                            <button onclick="insertButton(7)" id="btn_7">7</button>
+                                            <button onclick="insertButton(8)" id="btn_8">8</button>
+                                            <button onclick="insertButton(9)" id="btn_9">9</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button>4</button>
-                                            <button>5</button>
-                                            <button>6</button>
+                                            <button onclick="insertButton(4)" id="btn_4">4</button>
+                                            <button onclick="insertButton(5)" id="btn_5">5</button>
+                                            <button onclick="insertButton(6)" id="btn_6">6</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button>1</button>
-                                            <button>2</button>
-                                            <button>3</button>
+                                            <button onclick="insertButton(1)"id="btn_1">1</button>
+                                            <button onclick="insertButton(2)"id="btn_2">2</button>
+                                            <button onclick="insertButton(3)"id="btn_3">3</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button>+</button>
-                                            <button>0</button>
-                                            <button>-</button>
+                                            <button onclick="insertButton('+')"  id="btn_mais">+</button>
+                                            <button onclick="insertButton(0)" id="btn_0">0</button>
+                                            <button onclick="insertButton('-')" id="btn_menos">-</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button onclick="soma()" >=</button>
+                                            <button onclick="clearText()" >C</button>
                                         </td>
                                     </tr>
                                 </table>
