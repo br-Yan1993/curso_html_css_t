@@ -17,7 +17,29 @@
             }
 
             function soma() {
-                document.getElementById('teste').innerHTML = "12345"[0];
+                var ind = document.getElementById('visor').value.indexOf('+');
+                var result = parseInt(document.getElementById('visor').value.slice(0,ind)) +
+                 parseInt(document.getElementById('visor').value.slice(ind+1,))
+                 document.getElementById('visor').value = result;
+            }
+
+            function sub() {
+                var ind = document.getElementById('visor').value.indexOf('-');
+                var result = parseInt(document.getElementById('visor').value.slice(0,ind)) -
+                 parseInt(document.getElementById('visor').value.slice(ind+1,))
+                 document.getElementById('visor').value = result;
+            }
+
+            function igual() {
+                var subtracao = document.getElementById('visor').value.indexOf('-');
+                var adicao = document.getElementById('visor').value.indexOf('+');
+
+                if (subtracao > 0){
+                    sub();
+                }
+                else {
+                    soma()
+                }
             }
 
         </script>
@@ -69,7 +91,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button onclick="soma()" >=</button>
+                                            <button onclick="igual()" >=</button>
                                             <button onclick="clearText()" >C</button>
                                         </td>
                                     </tr>
