@@ -12,6 +12,17 @@ vet_senha = [
 
 function acessar() {
     user = document.getElementById('user').value;
-    alert(user);
-    //
+    pass = document.getElementById('pass').value;
+
+    //Executar um for para otimizar
+    
+    if ( (user == "joao_video" && pass == "12349") || (user == "gabi_js" && pass == "987654") ) {
+        alert("Parabens_"+user);
+    }
+    else {
+        alert("Usuário ou Senha incorreto! Tente novamente");
+        document.getElementById('user').value = "";
+        document.getElementById('pass').value = "";
+    }
+
 }
