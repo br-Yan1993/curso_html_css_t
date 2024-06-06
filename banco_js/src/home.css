@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(200, 231, 45);
+}
+
+#div_main {
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    margin: 2% 15%;
+    border-radius: 10px;
+    border-color: black;
+    border-style: dashed;
+}
+
+#sup_main {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    justify-content: right;
+    margin: 0% 5% 0% 5%;
+    border-radius: 10px;
+    border-color: black;
+    border-style: dashed;
+}
+
+#user, #pass {
+    background-color: rgb(100, 100, 100);
+    color:  rgb(200, 231, 45);
+}
+
+button {
+    background-color: white;
+}
